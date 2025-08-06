@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bara Imambara - Events</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fffcdc, #d9a7c7);
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    header {
+      background: linear-gradient(to right,  #faf07e, #dc84bc);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    header.shrink {
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    nav ul li {
+      margin: 5px 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      background-color: #f6c68c;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 40px;
+    }
+
+    ul.content-list {
+      padding-left: 20px;
+    }
+
+    ul.content-list li {
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    ul.content-list li.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul.content-list ul {
+      margin-top: 5px;
+    }
+
+    footer {
+      background: linear-gradient(to right,  #faf07e, #dc84bc);
+      color:rgb(84, 84, 84);
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    #scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #555;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    #scroll-to-top:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>The Majestic Bara Imambara</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">History</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Events & Exhibitions</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+        Join us for a variety of cultural, educational, and family-friendly events throughout the year.
+      </p>
+
+      <h3>Regular Events And Exhibitions</h3>
+      <ul class="content-list">
+        <li>
+          <strong>Cultural Festivals</strong>
+          <ul>
+            <li><strong>Uttar Pradesh Day (26th January):</strong> Events focusing on Uttar Pradesh’s heritage and history.</li>
+            <li><strong>Diwali or Eid Celebrations:</strong> Traditional lights, performances, and rituals.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Art and Photography Exhibitions:</strong>
+          <ul>
+            <li>Exhibitions about Lucknow's Nawabi era, artisans, and evolution.</li>
+            <li>Historical photography displays.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Music and Dance Events:</strong>
+          <ul>
+            <li>Classical music, Qawwali, and folk dance performances during festivals.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Workshops:</strong>
+          <ul>
+            <li>Awadhi cuisine, Chikan embroidery, and craft-based workshops.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Theatrical Performances:</strong>
+          <ul>
+            <li>Dramatic re-enactments of historical events and local legends.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Past Events Highlights</h3>
+      <ul class="content-list">
+        <li>
+          <strong>Lucknow Mahotsav (Cultural Festival):</strong>
+          <ul>
+            <li>Held in December–January showcasing music, dance, theater & cuisine.</li>
+            <li>Bara Imambara plays a key role in performances.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Classical Music and Dance Performances:</strong>
+          <ul>
+            <li>Held during national holidays like 15th August or 26th January.</li>
+            <li>Includes Kathak, Hindustani music, and folk presentations.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bara Imambara Official Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="scroll-to-top" title="Go to top">&#8593;</button>
+
+  <script>
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById("scroll-to-top");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Shrink header
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("shrink", window.scrollY > 50);
+    });
+
+    // Animate list items on scroll
+    const animatedItems = document.querySelectorAll("ul.content-list li");
+    function revealItemsOnScroll() {
+      const triggerPoint = window.innerHeight * 0.9;
+      animatedItems.forEach((item) => {
+        const top = item.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+          item.classList.add("visible");
+        }
+      });
+    }
+    window.addEventListener("scroll", revealItemsOnScroll);
+    window.addEventListener("load", revealItemsOnScroll);
+  </script>
+</body>
+</html>

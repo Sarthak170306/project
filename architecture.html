@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bara Imambara - Architecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Majestic Bara Imambara</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">History</a></li>
+                    <li><a href="architecture.html" class="active">Architecture</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Architectural Grandeur of Bara Imambara</h2>
+            <div class="section-content">
+                <div class="text-block">
+                    <h3>A Symphony of Styles</h3>
+                    <p>Bara Imambara's design is a magnificent fusion of Mughal, Persian, and Awadhi architectural styles. This eclectic blend is a testament to the diverse influences prevalent during its construction and gives the landmark its unique visual identity.</p>
+                    <p>Key elements include its distinctive large arched vaults and the labyrinthine Bhul Bhulaiya, and the masterful use of lime plaster and bricks instead of wood or iron, which contributes to the building’s unique strength and durability.</p>
+                </div>
+                <div class="image-block">
+                    <img src="Bara-Imambara-Lucknow-Tourist-Attraction-1024x683.jpg" alt="Architectural detail of arches or windows">
+                    <p style="text-align: center;">Windows Structure of Bara Imambara.</p>
+                </div>
+            </div>
+
+            <div class="section-content" style="margin-top: 40px;">
+                <div class="image-block">
+                    <img src="Discover-the-Majestic-Bara-Imambara-A-Historic-Marvel-of-Lucknow.jpg" alt="Image showing a specific structural element">
+                    <p style="text-align: center;">Structure of Bara Imambara.</p>
+                </div>
+                <div class="text-block">
+                    <h3>Engineering Feats and Ornamentation</h3>
+                    <p>Beyond its aesthetic appeal, Bara Imambara showcases remarkable engineering for its time. The construction of its colossal without modern machinery is a marvel. Techniques such as interlocking stones, lime mortar, precision-cut stone blocks and dry stone masonry ensured its longevity.</p>
+                    <p>The ornamentation is equally impressive, featuring delicate calligraphic carvings.. Every detail, from the grand facade to the smallest interior embellishment, tells a story and contributes to the landmark's immersive atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 40px;">
+                <h2>Notable Architectural Features</h2>
+                <ul class="content-list">
+                    <li><strong>Central Dome:</strong> The towering central dome, an architectural marvel, is built without any supporting beams or pillars, highlighting advanced engineering techniques of its time.</li>
+                    <li><strong>Bhool Bhulaiya (Labyrinth):</strong> The Bhool Bhulaiya, a complex network of over 1,000 narrow passageways, is designed to confuse and intrigue visitors, offering both mystery and strategic defense.</li>
+                    <li><strong>Asfi Mosque:</strong>The Asfi Mosque, located within the Imambara complex, features elegant Mughal architecture with ornate domes and minarets, serving as a place of worship and reflection.</li>
+                    <li><strong>Stepwell (Baoli):</strong> The Shahi Baoli, a stepwell within the complex, is an ingenious water management system that also served as a secret passage and meeting point during times of conflict.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bara Imambara Official Website. All rights reserved.</p>
+        </div>
+    </footer>
+    
+  <button id="scroll-to-top" title="Go to top">&#8593;</button>
+
+  <script>
+    // Scroll to top button
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Header shrink
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("shrink", window.scrollY > 50);
+    });
+
+    // Fade-in effect
+    const fadeElements = document.querySelectorAll(".section-content");
+
+    const fadeInOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      fadeElements.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if (elTop < triggerBottom) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    window.addEventListener("load", fadeInOnScroll);
+  </script>
+</body>
+</html>

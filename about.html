@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bara Imambara - History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Majestic Bara Imambara</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">History</a></li>
+                    <li><a href="architecture.html">Architecture</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>The Rich History of Bara Imambara</h2>
+            <div class="section-content">
+                <div class="text-block">
+                    <h3>Foundations of an Icon</h3>
+                    <p>The story of Bara Imambara begins in the year 1784, under the patronage of Asaf-ud-Daula, who belonged to the Shuja-ud-Daula dynasty. Conceived as a symbol of multiple historical and cultural values, its construction marked a pivotal moment in the region's history.</p>
+                    <p>Initial plans were laid by Nawab Asaf-ud-Daula, the fourth Nawab of Awadh, in 1784, who envisioned a structure that would a grand arched gateway leads to a vast open courtyard with green lawns. At the center stands the massive main hall with high arched entrances and a large central dome, flanked by the Asfi Mosque and Shahi Baoli. The architecture is majestic yet simple, reflecting grandeur, symmetry, and spiritual calm. The project faced numerous challenges, including sourcing materials and sustaining labor during the 1784 famine, but perseverance led to its eventual completion in 1791.</p>
+                </div>
+                <div class="image-block">
+                    <img src="images (1).jpg" alt="Historical drawing or early photo of Bara Imambara">
+                    <p>An artist's rendition of Bara Imambara during its early construction.</p>
+                </div>
+            </div>
+
+            <div class="section-content" style="margin-top: 40px;">
+                <div class="image-block">
+                    <img src="images (2).jpg" alt="Image depicting a historical event related to Bara Imambara">
+                    <p>A significant event in the history of Bara Imambara.</p>
+                </div>
+                <div class="text-block">
+                    <h3>Evolution Through Eras</h3>
+                    <p>Over the centuries, Bara Imambara has witnessed changing empires, including the decline of the Mughal Empire, the rise and rule of the Nawabs of Awadh, and the eventual British annexation of Awadh in 1856. It served various purposes, from an early symbol of royal generosity and famine relief to its current role as an active site of worship, cultural heritage monument, and major tourist attraction. Each era left its indelible mark, adding layers to its profound narrative.</p>
+                    <p>Significant restorations took place in 1900 and 1980, ensuring its preservation for future generations. Today, it stands not just as an architectural marvel, but as a living monument to resilience, humanitarian spirit, religious devotion, and the rich cultural heritage of Awadh.</p>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 40px;">
+                <h2>Historical Timeline</h2>
+                <ul class="content-list">
+                    <li><strong>1784:</strong> Construction of Bara Imambara begins under Nawab Asaf-ud-Daula as a famine relief project.</li>
+                    <li><strong>1791:</strong> Bara Imambara is completed after seven years of work.</li>
+                    <li><strong>1857:</strong>  The Imambara witnesses the Revolt of 1857, during which Lucknow becomes a center of resistance against British rule.</li>
+                    <li><strong>1900:</strong> First significant restoration work is carried out to preserve the structure.</li>
+                    <li><strong>1980:</strong> Another major restoration ensures the monument’s continued preservation and public access.</li>
+                    <li><strong>2025:</strong> Bara Imambara is a designated protected monument under the Archaeological Survey of India (ASI) and recognized as one of the most important cultural and historical landmarks of Lucknow and India..</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bara Imambara Official Website. All rights reserved.</p>
+        </div>
+    </footer>
+    
+  <button id="scroll-to-top" title="Go to top">&#8593;</button>
+
+  <script>
+    // Scroll to top button
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Header shrink
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("shrink", window.scrollY > 50);
+    });
+
+    // Fade-in effect
+    const fadeElements = document.querySelectorAll(".section-content");
+
+    const fadeInOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      fadeElements.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if (elTop < triggerBottom) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    window.addEventListener("load", fadeInOnScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bada Imambara - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>The Majestic Bada Imambara</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">History</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Contact Us</h2>
+      <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+        We'd love to hear from you! Please use the form below or contact us via the details provided.
+      </p>
+
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+
+      <div class="section-content" style="margin-top: 40px; justify-content: space-around;">
+        <div class="text-block" style="flex: none; width: 45%;">
+          <h3>General Inquiries</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@badaimambara.org">info@badaimambara.org</a></p>
+          <p><strong>Phone:</strong> +91 123 456 7890</p>
+          <p><strong>Address:</strong><br>Bara Imambara Road<br>Lucknow, Uttar Pradesh 226003<br>India</p>
+        </div>
+        <div class="text-block" style="flex: none; width: 45%;">
+          <h3>Follow Us</h3>
+          <p>Stay connected and get the latest updates!</p>
+          <ul class="content-list" style="padding: 0; list-style: none;">
+            <li><a href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+          </ul>
+          <p style="font-size: 0.9em; margin-top: 15px;">
+            <em>Note: These are placeholder links. Replace with your real URLs.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bada Imambara Official Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="scroll-to-top" title="Go to top">&#8593;</button>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", () => {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("shrink", window.scrollY > 50);
+    });
+
+    const fadeElements = document.querySelectorAll(".section-content");
+
+    const fadeInOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      fadeElements.forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if (elTop < triggerBottom) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    window.addEventListener("load", fadeInOnScroll);
+  </script>
+</body>
+</html>
